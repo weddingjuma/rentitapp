@@ -1,6 +1,7 @@
-Ionic + Parse.com API
+RENT!T APP
 =======================
+A mobile app for Rentit Project.
 
-This is an Ionic app that shows how to integrate Ionic and Parse to create a todo app.
+Post, View, Search and rent out an item.
 
-Read the tutorial [here](http://www.htmlxprs.com/post/12/tutorial-on-using-parse-rest-api-and-ionic-framework-together) .
+[SMS Platform](https://github.com/denzelwamburu/rentsms).
