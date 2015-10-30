@@ -48,6 +48,6 @@ angular.module('todoApp.services',[]).factory('Todo',['$http','PARSE_CREDENTIALS
         }
     }
 }]).value('PARSE_CREDENTIALS',{
-    APP_ID: 'xhTpJiNedJ7mmDj3LTTBUePqSVegcJHzEbh70Y0Q',
-    REST_API_KEY:'XCfQDPODgNB1HqmaCQgKLPWGxQ0lCUxqffzzURJY'
+    APP_ID: '1DuQF044x7yRejJozSJTiAU5Kyb15c0pD4pDACSg',
+    REST_API_KEY:'fZaFe3xw8N8rTNH16Hv44fXeG5uHDHpFKjCqYvos'
 });
