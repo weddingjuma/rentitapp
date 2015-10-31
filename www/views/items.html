@@ -10,7 +10,7 @@
     <ion-list show-delete="data.showDelete" class="list card">
         <ion-item ng-repeat="item in items | orderBy: '-createdAt'"
                   item="item"
-                  href="#/item/edit/{{item.objectId}}/{{item.content}}" class="item item-text-wrap">
+                  href="#/item/view/{{item.objectId}}/" class="item item-text-wrap">
             <div class="card">
             <div class="item item-text-wrap">
             {{item.content}}

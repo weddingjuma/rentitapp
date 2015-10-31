@@ -41,10 +41,10 @@ angular.module('rentit.controllers',[]).controller('ItemListController',['$scope
 
     $scope.item={id:$stateParams.id,content:$stateParams.content};
 
-/**    $scope.edit=function(){
+   $scope.edit=function(){
         Item.edit($scope.item.id,{content:$scope.item.content}).success(function(data){
             $state.go('items');
         });
-    } **/
+    } 
 
 }]);
