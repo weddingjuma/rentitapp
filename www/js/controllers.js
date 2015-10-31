@@ -36,4 +36,15 @@ angular.module('rentit.controllers',[]).controller('ItemListController',['$scope
         });
     }
 
+}])
+.controller('ItemViewController',['$scope','Item','$state','$stateParams',function($scope,Item,$state,$stateParams){
+
+    $scope.item={id:$stateParams.id,content:$stateParams.content};
+
+/**    $scope.edit=function(){
+        Item.edit($scope.item.id,{content:$scope.item.content}).success(function(data){
+            $state.go('items');
+        });
+    } **/
+
 }]);

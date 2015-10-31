@@ -30,5 +30,10 @@ angular.module('rentit', ['ionic','rentit.controllers','rentit.services'])
             url:'/item/edit/:id/:content',
             controller:'ItemEditController',
             templateUrl:'views/edit-item.html'
+        })
+        .state('viewItem',{
+            url:'/item/view/:id',
+            controller:'ItemViewController',
+            templateUrl:'views/view-item.html'
         });
 });
