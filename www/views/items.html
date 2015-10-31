@@ -7,11 +7,15 @@
 </ion-header-bar>
 
 <ion-content>
-    <ion-list show-delete="data.showDelete">
+    <ion-list show-delete="data.showDelete" class="list card">
         <ion-item ng-repeat="item in items | orderBy: '-createdAt'"
                   item="item"
-                  href="#/item/edit/{{item.objectId}}/{{item.content}}">
+                  href="#/item/edit/{{item.objectId}}/{{item.content}}" class="item item-text-wrap">
+            <div class="card">
+            <div class="item item-text-wrap">
             {{item.content}}
+          </div>
+        </div>
             <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)"></ion-delete-button>
         </ion-item>
     </ion-list>

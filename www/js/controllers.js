@@ -14,7 +14,13 @@ angular.module('rentit.controllers',[]).controller('ItemListController',['$scope
     $scope.item={};
 
     $scope.create=function(){
-        Item.create({content:$scope.item.content}).success(function(data){
+        Item.create({
+          content:$scope.item.content,
+          category:$scope.item.category,
+          phone:$scope.item.phone,
+          rate:$scope.item.rate
+
+        }).success(function(data){
             $state.go('items');
         });
     }
