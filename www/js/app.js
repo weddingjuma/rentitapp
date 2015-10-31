@@ -15,20 +15,20 @@ angular.module('rentit', ['ionic','rentit.controllers','rentit.services'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-    $state.go('todos');
+    $state.go('items');
   });
 }).config(function($stateProvider){
-        $stateProvider.state('todos',{
-           url:'/todos',
-           controller:'TodoListController',
-           templateUrl:'views/todos.html'
-        }).state('createTodo',{
-            url:'/todo/new',
-            controller:'TodoCreationController',
-            templateUrl:'views/create-todo.html'
-        }).state('editTodo',{
-            url:'/todo/edit/:id/:content',
-            controller:'TodoEditController',
-            templateUrl:'views/edit-todo.html'
+        $stateProvider.state('items',{
+           url:'/items',
+           controller:'ItemListController',
+           templateUrl:'views/items.html'
+        }).state('createItem',{
+            url:'/item/new',
+            controller:'ItemCreationController',
+            templateUrl:'views/create-item.html'
+        }).state('editItem',{
+            url:'/item/edit/:id/:content',
+            controller:'ItemEditController',
+            templateUrl:'views/edit-item.html'
         });
 });

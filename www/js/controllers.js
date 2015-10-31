@@ -1,32 +1,32 @@
-angular.module('rentit.controllers',[]).controller('TodoListController',['$scope','Todo',function($scope,Todo){
+angular.module('rentit.controllers',[]).controller('ItemListController',['$scope','Item',function($scope,Item){
 
-    Todo.getAll().success(function(data){
+    Item.getAll().success(function(data){
         $scope.items=data.results;
     });
 
     $scope.onItemDelete=function(item){
-        Todo.delete(item.objectId);
+        Item.delete(item.objectId);
         $scope.items.splice($scope.items.indexOf(item),1);
     }
 
-}]).controller('TodoCreationController',['$scope','Todo','$state',function($scope,Todo,$state){
+}]).controller('ItemCreationController',['$scope','Item','$state',function($scope,Item,$state){
 
-    $scope.todo={};
+    $scope.item={};
 
     $scope.create=function(){
-        Todo.create({content:$scope.todo.content}).success(function(data){
-            $state.go('todos');
+        Item.create({content:$scope.item.content}).success(function(data){
+            $state.go('items');
         });
     }
 
 
-}]).controller('TodoEditController',['$scope','Todo','$state','$stateParams',function($scope,Todo,$state,$stateParams){
+}]).controller('ItemEditController',['$scope','Item','$state','$stateParams',function($scope,Item,$state,$stateParams){
 
-    $scope.todo={id:$stateParams.id,content:$stateParams.content};
+    $scope.item={id:$stateParams.id,content:$stateParams.content};
 
     $scope.edit=function(){
-        Todo.edit($scope.todo.id,{content:$scope.todo.content}).success(function(data){
-            $state.go('todos');
+        Item.edit($scope.item.id,{content:$scope.item.content}).success(function(data){
+            $state.go('items');
         });
     }
 

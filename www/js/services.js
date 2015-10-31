@@ -1,10 +1,10 @@
 /**
  * Created by Sandeep on 11/09/14.
  */
-angular.module('rentit.services',[]).factory('Todo',['$http','PARSE_CREDENTIALS',function($http,PARSE_CREDENTIALS){
+angular.module('rentit.services',[]).factory('Item',['$http','PARSE_CREDENTIALS',function($http,PARSE_CREDENTIALS){
     return {
         getAll:function(){
-            return $http.get('https://api.parse.com/1/classes/Todo',{
+            return $http.get('https://api.parse.com/1/classes/Item',{
                 headers:{
                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
                     'X-Parse-REST-API-Key':PARSE_CREDENTIALS.REST_API_KEY,
@@ -12,7 +12,7 @@ angular.module('rentit.services',[]).factory('Todo',['$http','PARSE_CREDENTIALS'
             });
         },
         get:function(id){
-            return $http.get('https://api.parse.com/1/classes/Todo/'+id,{
+            return $http.get('https://api.parse.com/1/classes/Item/'+id,{
                 headers:{
                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
                     'X-Parse-REST-API-Key':PARSE_CREDENTIALS.REST_API_KEY,
@@ -20,7 +20,7 @@ angular.module('rentit.services',[]).factory('Todo',['$http','PARSE_CREDENTIALS'
             });
         },
         create:function(data){
-            return $http.post('https://api.parse.com/1/classes/Todo',data,{
+            return $http.post('https://api.parse.com/1/classes/Item',data,{
                 headers:{
                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
                     'X-Parse-REST-API-Key':PARSE_CREDENTIALS.REST_API_KEY,
@@ -29,7 +29,7 @@ angular.module('rentit.services',[]).factory('Todo',['$http','PARSE_CREDENTIALS'
             });
         },
         edit:function(id,data){
-            return $http.put('https://api.parse.com/1/classes/Todo/'+id,data,{
+            return $http.put('https://api.parse.com/1/classes/Item/'+id,data,{
                 headers:{
                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
                     'X-Parse-REST-API-Key':PARSE_CREDENTIALS.REST_API_KEY,
@@ -38,7 +38,7 @@ angular.module('rentit.services',[]).factory('Todo',['$http','PARSE_CREDENTIALS'
             });
         },
         delete:function(id){
-            return $http.delete('https://api.parse.com/1/classes/Todo/'+id,{
+            return $http.delete('https://api.parse.com/1/classes/Item/'+id,{
                 headers:{
                     'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
                     'X-Parse-REST-API-Key':PARSE_CREDENTIALS.REST_API_KEY,
