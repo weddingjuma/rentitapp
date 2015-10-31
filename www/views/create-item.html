@@ -6,7 +6,7 @@
 </ion-header-bar>
 
 <ion-content>
-    <div>
+  <!--  <div>
         <ion-list>
             <li class="item item-input item-stacked-label">
                 <textarea type="text" placeholder="Start typing..." name="content" rows="10" ng-model="item.content" required></textarea>
@@ -16,4 +16,31 @@
             </ion-button>
         </ion-list>
     </div>
+  -->
+  <div  class="list-inset">
+      <h4>Post New Item</h4>
+  <ion-list class="has-header">
+    <label class="item item-input item-floating-label">
+   <span class="input-label">Content</span>
+    <input type="text" placeholder="Your Item Details" ng-model="item.content"/>
+  </label>
+       <label class="item item-input item-floating-label">
+                   <span class="input-label">Category</span>
+<input type="text" placeholder="Type" name="type"  ng-model="item.category">
+      </label>
+      <label class="item item-input item-floating-label">
+                  <span class="input-label">Rate</span>
+<input type="text" placeholder="Rate" name="type"  ng-model="item.rate">
+     </label>
+       <label class="item item-input item-floating-label">
+     <span class="input-label">Your Number</span>
+      <input type="text" placeholder="Your Contact Info" ng-model="item.phone"/>
+    </label>
+
+      <button class="button button-full button-energized" ng-click="create()">
+         RENT!T
+      </button>
+  </ion-list>
+</div>
+
 </ion-content>
