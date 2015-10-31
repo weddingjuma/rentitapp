@@ -6,7 +6,26 @@
 </ion-header-bar>
 
 <ion-content>
-    <div>
+    <div class="card">
+      <div class="item item-text-wrap">
       {{item.content}}
+      <br/>
+      {{items.category}}
+      <br/>
+      {{items.phone}}
+
+
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+         <a class="tab-item" href="{{item.phone}}">
+           <i class="icon ion-android-call"></i>
+           Call Renter
+         </a>
+         <a class="tab-item" href="#">
+           <i class="icon ion-star"></i>
+           Add To WishList
+         </a>
+
+       </div>
     </div>
 </ion-content>

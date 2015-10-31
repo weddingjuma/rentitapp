@@ -27,12 +27,12 @@ angular.module('rentit', ['ionic','rentit.controllers','rentit.services'])
             controller:'ItemCreationController',
             templateUrl:'views/create-item.html'
         }).state('editItem',{
-            url:'/item/edit/:id/:content',
             controller:'ItemEditController',
+            url:'/item/edit/:id/:content',
             templateUrl:'views/edit-item.html'
         })
         .state('viewItem',{
-            url:'/item/view/:id/',
+            url:'/item/view/:id/:content',
             controller:'ItemViewController',
             templateUrl:'views/view-item.html'
         });

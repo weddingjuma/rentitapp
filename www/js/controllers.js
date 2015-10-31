@@ -39,12 +39,21 @@ angular.module('rentit.controllers',[]).controller('ItemListController',['$scope
 }])
 .controller('ItemViewController',['$scope','Item','$state','$stateParams',function($scope,Item,$state,$stateParams){
 
-    $scope.item={id:$stateParams.id,content:$stateParams.content};
+  Item.getAll().success(function(data){
+      $scope.items=data.results;
+  });
 
-   $scope.edit=function(){
+    $scope.item = {
+      id:$stateParams.id,
+      content:$stateParams.content,
+      phone:$stateParams.phone,
+      category:$stateParams.category
+    };
+
+/**    $scope.edit=function(){
         Item.edit($scope.item.id,{content:$scope.item.content}).success(function(data){
             $state.go('items');
         });
-    } 
+    } **/
 
 }]);
